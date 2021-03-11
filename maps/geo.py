@@ -5,6 +5,13 @@ from sunnyday import Weather
 from folium import Marker
 from random import uniform
 
+# terms
+# class, instance, method, constructor(init)
+# instance method, class method
+# parameters, arguments, argument values
+# instance variables, class variables
+# attributes or member
+
 
 class Geopoint(Marker):
     # to access class variable
@@ -45,11 +52,5 @@ class Geopoint(Marker):
         return weather.next_12h_simplified()
 
     @classmethod
-    def ranfom(cls):
+    def random(cls):
         return cls(latitude=uniform(-90, 90), longitude=uniform(-180, 180))
-
-
-tokyo = Geopoint(latitude=35.7, longitude=139.7)
-print(tokyo.get_time())
-print(tokyo.get_weather())
-print(Geopoint.ranfom())

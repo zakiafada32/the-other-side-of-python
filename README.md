@@ -1,1 +1,3 @@
-python playground
+# python playground
+
+## some interesting projects
