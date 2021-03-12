@@ -1,9 +1,13 @@
+import os
+from dotenv import load_dotenv
 from datetime import datetime
 from timezonefinder import TimezoneFinder
 from pytz import timezone
 from sunnyday import Weather
 from folium import Marker
 from random import uniform
+
+load_dotenv()
 
 # terms
 # class, instance, method, constructor(init)
@@ -45,7 +49,7 @@ class Geopoint(Marker):
     def get_weather(self):
         # https://openweathermap.org
         weather = Weather(
-            apikey="26631f0f41b95fb9f5ac0df9a8f43c92",
+            apikey=os.getenv("OPENWEATHERMAP"),
             lat=self.latitude,
             lon=self.longitude,
         )
