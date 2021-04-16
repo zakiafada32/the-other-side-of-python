@@ -1,4 +1,4 @@
-from .canvas import Canvas
+from .canvas import Canvas, Color
 from .shapes import Rectangle, Square
 
 # Get canvas width and height from the user
@@ -6,7 +6,7 @@ canvas_width = int(input("Enter canvas width: "))
 canvas_height = int(input("Enter canvas height: "))
 
 # Make a dictionary of color codes and prompt for color
-colors = {"white": (255, 255, 255), "black": (0, 0, 0)}
+colors: Color = {"white": (255, 255, 255), "black": (0, 0, 0)}
 canvas_color = input("Enter canvas color (white or black): ")
 
 # Create a canvas with the user data
