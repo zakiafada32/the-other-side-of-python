@@ -1,5 +1,5 @@
-from .canvas import Canvas, Color
-from .shapes import Rectangle, Square
+from canvas import Canvas, Color
+from shapes import Rectangle, Square
 
 # Get canvas width and height from the user
 canvas_width = int(input("Enter canvas width: "))

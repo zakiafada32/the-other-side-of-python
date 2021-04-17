@@ -1,5 +1,5 @@
 from folium import Map, Popup
-from .geo import Geopoint
+from geo import Geopoint
 
 # Get latitude and longitude values
 locations = [[1, -1], [2, 2], [39, 5], [42, 1]]
@@ -26,4 +26,4 @@ for lat, lon in locations:
     geopoint.add_to(mymap)
 
 # Save the Map instance into a HTML file
-mymap.save("maps/map.html")
+mymap.save("map.html")

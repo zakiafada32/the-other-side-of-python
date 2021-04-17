@@ -27,7 +27,7 @@ class PdfReport:
 
         # Add icon
         pdf.image(
-            f"{os.getcwd()}/room-bill/files/house.png",
+            f"{os.getcwd()}/files/house.png",
             w=30,
             h=30,
         )
@@ -51,7 +51,7 @@ class PdfReport:
         pdf.cell(w=150, h=25, txt=flatmate2_pay, border=0, ln=1)
 
         # Change directory to files, generate and open the PDF
-        os.chdir(f"{os.getcwd()}/room-bill/files/")
+        os.chdir(f"{os.getcwd()}/files/")
         pdf.output(self.filename)
         chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe %s"
         webbrowser.get(chrome_path).open(f"{os.getcwd()}/{self.filename}", new=2)
